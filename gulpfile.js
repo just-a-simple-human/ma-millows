@@ -21,22 +21,26 @@ function concatJs() {
 }
 
 function minCss() {
-  return src("./index.css").pipe(GulpCleanCss()).pipe(dest("...//dist"));
+  return src("./index.css").pipe(GulpCleanCss()).pipe(dest("./dist"));
 }
 
 function minifyJs() {
-  return src("./index.js").pipe(GulpUglify()).pipe(dest("...//dist"));
+  return src("./index.js").pipe(GulpUglify()).pipe(dest("./dist"));
 }
 
 function copyHtml() {
   return src("./*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("../dist"));
+    .pipe(dest("./dist"));
+}
+
+function copyFonts() {
+  return src("./fonts/*.otf", { encoding: false }).pipe(dest("./dist/fonts"));
 }
 
 function copyImages() {
   return src("./images/**/*.png", { encoding: false }).pipe(
-    dest("../dist/images")
+    dest("./dist/images")
   );
 }
 
@@ -44,6 +48,7 @@ async function buildTask() {
   minCss();
   minifyJs();
   copyHtml();
+  copyFonts();
   copyImages();
 }
 
