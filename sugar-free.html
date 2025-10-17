@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__menu-button">
+        <img src="images/menu-burger.png" alt="" class="header__menu-image" />
+      </button>
+      <a class="header__logo">
+        <img class="header__logo-img" src="images/logo.png" />
+      </a>
+      <div class="header__search-container">
+        <input
+          class="header__search-input"
+          placeholder="Поиск..."
+          name="search"
+        />
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="/">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="classic.html">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="about-us.html">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Идеи</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contact" class="menu__link" href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__button-container">
+        <button class="header__button">
+          <img class="header__button-img" src="images/cart.png" alt="" />
+        </button>
+        <button class="header__button">
+          <img class="header__button-img" src="images/account.png" alt="" />
+        </button>
+      </div>
+    </header>
+    <main class="page">
+      <div class="container category-block category-block--sugar-free">
+        <p class="category-block__subtitle">Чаще всего покупают!</p>
+        <p class="category-block__title">Без сахара</p>
+        <p class="category-block__description">
+          Классическая линия маршмеллоу maMiLliow’s имеет изысканный ванильный
+          нежный вкус с легкими нотками пломбирного мороженого или вкус
+          фруктового сочного микса.
+          <br />
+          Продукт мягкий, воздушный и тает во рту, оставляя приятное сливочное
+          послевкусие. В поджаренном виде добавляется карамельная хрустящая
+          корочка, а внутри он становится мягучим и тёплым.
+        </p>
+        <ul class="category-block__info">
+          <li class="category-block__info-item">
+            доступно в размерах: 90 г и 120 г;
+          </li>
+          <li class="category-block__info-item">
+            имеет два вкуса: ваниль-пломбир и фруктовый микс.
+          </li>
+        </ul>
+        <button class="category-block__button">Открыть</button>
+      </div>
+      <section class="catalog">
+        <div class="catalog__header">
+          <h1 class="catalog__heading">Каталог</h1>
+          <nav class="catalog__nav">
+            <ul class="catalog__nav-list">
+              <li class="catalog__nav-item">
+                <a
+                  href="sugar-free.html"
+                  class="catalog__nav-link catalog__nav-link--blue catalog__nav-link--active"
+                  >maMillow's SUGAR FREE</a
+                >
+              </li>
+              <li class="catalog__nav-item">
+                <a
+                  href="classic.html"
+                  class="catalog__nav-link catalog__nav-link--pink"
+                  >maMillow's CLASSIC</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="catalog__product-list">
+          <article class="catalog__product-card">
+            <h3 class="catalog__product-title" style="color: #f39c00">
+              Vanilla+Plombir
+            </h3>
+            <div class="catalog__product-container vanilla-plombir-90-bg">
+              <p class="catalog__product-description">
+                Насыщенный пломбир + ваниль
+              </p>
+              <p class="catalog__product-weight catalog__product-weight--small">
+                90 г
+              </p>
+              <img
+                srcset="
+                  images/product/vanilla-plombir/90/sugar-free-mobile.png 480w,
+                  images/product/vanilla-plombir/90/sugar-free.png
+                "
+                alt=""
+                class="catalog__product-image catalog__product-image--small"
+              />
+            </div>
+          </article>
+          <article class="catalog__product-card">
+            <h3 class="catalog__product-title" style="color: #d84e90">
+              Fruitmix
+            </h3>
+            <div class="catalog__product-container fruitmix-90-bg">
+              <p class="catalog__product-description">Яркий фруктовый микс</p>
+              <p class="catalog__product-weight catalog__product-weight--small">
+                90 г
+              </p>
+              <img
+                srcset="
+                  images/product/fruitmix/90/sugar-free-mobile.png 480w,
+                  images/product/fruitmix/90/sugar-free.png
+                "
+                alt=""
+                class="catalog__product-image catalog__product-image--small"
+              />
+            </div>
+          </article>
+          <article class="catalog__product-card">
+            <h3 class="catalog__product-title" style="color: #40bbcb">
+              Vanilla+Plombir
+            </h3>
+            <div class="catalog__product-container vanilla-plombir-120-bg">
+              <p class="catalog__product-description">
+                Насыщенный пломбир + ваниль
+              </p>
+              <p class="catalog__product-weight catalog__product-weight--big">
+                120 г
+              </p>
+              <img
+                srcset="
+                  images/product/vanilla-plombir/120/sugar-free-mobile.png 480w,
+                  images/product/vanilla-plombir/120/sugar-free.png
+                "
+                alt=""
+                class="catalog__product-image catalog__product-image--big"
+              />
+            </div>
+          </article>
+          <article class="catalog__product-card">
+            <h3 class="catalog__product-title" style="color: #486dce">
+              Fruitmix
+            </h3>
+            <div class="catalog__product-container fruitmix-120-bg">
+              <p class="catalog__product-description">Яркий фруктовый микс</p>
+              <p class="catalog__product-weight catalog__product-weight--big">
+                120 г
+              </p>
+              <img
+                srcset="
+                  images/product/fruitmix/120/sugar-free-mobile.png 480w,
+                  images/product/fruitmix/120/sugar-free.png
+                "
+                alt=""
+                class="catalog__product-image catalog__product-image--big"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+      <div class="container feedback" id="#feedback">
+        <section
+          id="contact"
+          class="contact"
+          aria-labelledby="#contact-heading"
+        >
+          <h2 id="contact-heading" class="contact__heading">Контакты</h2>
+          <img
+            srcset="images/contact-bg-mobile.png 480w, images/contact-bg.png"
+            alt=""
+            class="contact__image"
+          />
+          <ul class="contact__list">
+            <li class="contact__item">
+              <img
+                src="images/contact-email.png"
+                alt=""
+                class="contact__icon"
+              />
+              <div class="contact__info">
+                <p class="contact__title">Email</p>
+                <a href="mailto:info@mamillows.ru" class="contact__link"
+                  >info@mimillows.ru</a
+                >
+              </div>
+            </li>
+            <li class="contact__item">
+              <img src="images/contact-tg.png" alt="" class="contact__icon" />
+              <div class="contact__info">
+                <p class="contact__title">Поддержка</p>
+                <a href="t.me/mamillows" target="_blank" class="contact__link"
+                  >t.me/mamillows</a
+                >
+              </div>
+            </li>
+            <li class="contact__item">
+              <img src="images/contact-vk.png" alt="" class="contact__icon" />
+              <div class="contact__info">
+                <p class="contact__title">ВКонтакте</p>
+                <a href="vk.com/mamillows" target="_blank" class="contact__link"
+                  >vk.com/mamillows</a
+                >
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="feedback__container">
+          <h2 class="feedback__heading">Отправить вопрос</h2>
+          <p class="feedback__text">
+            Если вы хотите обсудить что-либо, связанное с оплатой, учётной
+            записью, лицензированием, партнёрством или задать вопросы перед
+            продажей, вы попали по адресу
+          </p>
+          <form action="" class="feedback__form">
+            <div class="feedback__value feedback__name">
+              <label for="feedback-name" class="feedback__label"
+                >Полное имя</label
+              >
+              <input
+                placeholder="Введите имя..."
+                name="feedback-name"
+                type="text"
+                class="feedback__input"
+              />
+            </div>
+            <div class="feedback__value feedback__email">
+              <label for="feedback-email" class="feedback__label">Email</label>
+              <input
+                placeholder="Введите email..."
+                name="feedback-email"
+                type="text"
+                class="feedback__input"
+              />
+            </div>
+            <div class="feedback__value feedback__phone">
+              <label for="feedback-phone" class="feedback__label"
+                >Номер телефона</label
+              >
+              <input
+                placeholder="Введите номер телефона..."
+                name="feedback-phone"
+                type="text"
+                class="feedback__input"
+              />
+            </div>
+            <div class="feedback__value feedback__question">
+              <label for="feedback-question" class="feedback__label"
+                >Ваш вопрос</label
+              >
+              <textarea
+                rows="6"
+                placeholder="Написать сообщение"
+                name="feedback-question"
+                class="feedback__text-area"
+              ></textarea>
+            </div>
+            <button type="submit" class="feedback__button">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <label for="subscription-email" class="footer__label"
+        >Получите доступ к интересным статьям, акциям и специальным предложениям
+        для вас</label
+      >
+      <form action="" class="footer__form">
+        <fieldset class="footer__field">
+          <input type="text" id="subscription-email" class="footer__input" />
+          <button type="submit" class="footer__button">Отправить</button>
+        </fieldset>
+        <fieldset class="footer__field">
+          <input
+            type="checkbox"
+            checked="false"
+            id="subscription-checkbox"
+            class="footer__privacy-checkbox"
+          />
+          <label for="subscription-checkbox" class="footer__privacy-label"
+            >Я согласен с <a href="">политикой конфиденциальности</a></label
+          >
+        </fieldset>
+      </form>
+      <img
+        srcset="images/footer-separator-mobile.png 480w"
+        alt=""
+        class="footer__sepatator"
+      />
+      <p class="footer__info">
+        ООО &laquo;Компания&raquo;<br />
+        <br />
+        ИНН 12943253421<br />
+        <br />
+        Адрес юридический: 115114 г. Белгород Петров-Сергеева-Егорова-Андреева
+        дом 4, стр. 1, 9 этаж, офис 93<br />
+        <br />
+        Безопасность платежей гарантируется использованием SSL протокола. Данные
+        вашей банковской карты надёжно защищены при оплате онлайн<br />
+        <br />
+        &copy; 2024 ООО &laquo;Компания&raquo;. Все права защищены.
+      </p>
+      <nav class="footer__nav">
+        <a href="" class="footer__nav-link">Категория</a>
+        <a href="" class="footer__nav-link">Другая категория</a>
+        <a href="" class="footer__nav-link">Ещё категория</a>
+        <a href="" class="footer__nav-link">И ещё одна</a>
+        <a href="" class="footer__nav-link">Категория</a>
+        <a href="" class="footer__nav-link">Другая категория</a>
+        <a href="" class="footer__nav-link">Ещё категория</a>
+        <a href="" class="footer__nav-link">И ещё одна</a>
+        <a href="" class="footer__nav-link">Идеи</a>
+        <a href="" class="footer__nav-link">Контакты</a>
+        <a href="" class="footer__nav-link">Блог</a>
+        <a href="" class="footer__nav-link">Каталог</a>
+        <a href="" class="footer__nav-link">Политика конфиденциальности</a>
+        <a href="" class="footer__nav-link">Политика возврата</a>
+      </nav>
+    </footer>
+    <template id="catalog-product-card">
+      <article class="catalog__product-card">
+        <h3 class="catalog__product-title"></h3>
+        <div class="catalog__product-container">
+          <p class="catalog__product-description"></p>
+          <p class="catalog__product-weight"></p>
+          <img src="" alt="" class="catalog__product-image" />
+        </div>
+      </article>
+    </template>
+  </body>
+</html>

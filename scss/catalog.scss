@@ -1,0 +1,460 @@
+@keyframes category-block-appearence {
+    from {
+        opacity: 0;
+        transform: translatex(-128px);
+    }
+
+    50% {
+        transform: translatex(0px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.category-block {
+    position: relative;
+    aspect-ratio: 356 / 127;
+    border-radius: 24px;
+    margin-top: 72px;
+    padding-inline: 64px;
+    padding-block: clamp(20px, 2vw, 32px);
+    animation: category-block-appearence 2s forwards;
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4px, 0.75vw, 12px);
+
+    @media (max-width: 480px) {
+        margin-top: 16px;
+        padding-inline: 16px;
+        padding-block: 32px;
+
+        aspect-ratio: 7/5;
+        gap: 4px;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            margin-left: 20px;
+            font-size: 8px;
+        }
+    }
+
+    &__title {
+        font-family: "AlterAves";
+        font-size: clamp(32px, 3vw, 40px);
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            margin-left: 20px;
+            font-size: 16px;
+        }
+    }
+
+    &__description {
+        width: 42%;
+        font-size: clamp(12px, 1vw, 14px);
+        font-weight: 500;
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__info {
+        width: 42%;
+        list-style: disc;
+        list-style-position: inside;
+    }
+
+    &__info-item {
+        font-size: clamp(12px, 1vw, 14px);
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__button {
+        padding-inline: 32px;
+        padding-block: 8px;
+        border-radius: 16px;
+        background-color: #5870d0;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        cursor: pointer;
+
+        position: absolute;
+        bottom: 32px;
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+            padding-inline: 16px;
+            padding-block: 4px;
+            bottom: 16px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: color-mix(in oklab, #5870d0 90%, #272727 10%);
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 105%;
+        height: 105%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (max-width: 480px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &--classic::before {
+        background-image: url("/images/classic-category-bg.png");
+
+        @media (max-width: 480px) {
+            background-image: url("/images/classic-category-bg-mobile.png");
+        }
+    }
+
+    &--sugar-free::before {
+        background-image: url("/images/sugar-free-category-bg.png");
+
+        @media (max-width: 480px) {
+            background-image: url("/images/sugar-free-category-bg-mobile.png");
+        }
+    }
+}
+
+.catalog {
+    margin-top: 32px;
+
+    @media (max-width: 480px) {
+        margin-top: 16px;
+    }
+
+    &__heading {
+        padding-bottom: 8px;
+        font-family: "AlterAves";
+        font-size: 48px;
+        color: #2450b2;
+        border-bottom: 3px solid #2450b2;
+
+        @media (max-width: 480px) {
+            font-size: 20px;
+            border-bottom-width: 2px;
+            padding-bottom: 4px;
+        }
+    }
+
+    &__header {
+        min-width: 768px;
+        width: 75vw;
+        max-width: 1440px;
+        margin-inline: auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: 1px solid #6365cf;
+
+        @media (max-width: 480px) {
+            min-width: 288px;
+            width: 93.33vw;
+            max-width: 448px;
+            margin-inline: auto;
+        }
+    }
+
+    &__nav {
+        display: contents;
+        min-height: 100%;
+        flex: 1;
+    }
+
+    &__nav-list {
+        height: 100%;
+        display: contents;
+        list-style: none;
+    }
+
+    &__nav-item {
+        min-height: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-link {
+        width: fit-content;
+        height: 100%;
+        padding-inline: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "Gerbera-Medium";
+        font-size: clamp(12px, 1.94vw, 24px);
+        text-align: center;
+
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        transition: all .5s;
+
+        @media (hover: hover) {
+            &:hover {
+                font-size: clamp(16px, 1.94vw, 28px);
+                padding-inline: 0;
+            }
+        }
+
+        &--active {
+            font-size: clamp(20px, 2.22vw, 32px);
+            padding-inline: 0;
+
+            @media (hover: hover) {
+                &:hover {
+                    font-size: clamp(20px, 2.22vw, 32px);
+                }
+            }
+        }
+
+        &--blue {
+            border-bottom-color: #486dce;
+            color: #486dce;
+        }
+
+        &--pink {
+            border-bottom-color: #d143d1;
+            color: #d143d1;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+            border-bottom-width: 2px;
+
+            &--active {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__product-list {
+        min-width: 896px;
+        width: 85vw;
+        max-width: 1184px;
+        margin-inline: auto;
+        margin-top: 64px;
+        display: grid;
+        gap: 64px;
+        grid-template-columns: repeat(2, calc(50% - 32px));
+
+        @media (max-width: 480px) {
+            min-width: 288px;
+            width: 93.33vw;
+            max-width: 448px;
+            margin-inline: auto;
+            margin-top: 32px;
+            gap: 16px;
+
+            grid-template-columns: repeat(2, calc(50% - 8px));
+        }
+    }
+
+    &__product-card {
+        display: block;
+    }
+
+    &__product-container {
+        padding: 24px;
+        padding-right: 12px;
+        margin-top: 16px;
+        border-radius: 16px;
+        aspect-ratio: 2.23;
+
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media (max-width: 480px) {
+            aspect-ratio: 1/1;
+            margin-top: 8px;
+            padding: 12px;
+            background-size: contain;
+        }
+    }
+
+    &__product-title {
+        margin-left: 24px;
+        position: relative;
+        font-family: "AlterAves";
+        font-size: 32px;
+        font-weight: 400;
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 32px;
+            display: block;
+            background-image: url("/images/product-crown.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -32px;
+            top: -20px;
+            z-index: 0;
+
+            @media (max-width: 480px) {
+                width: 20px;
+                height: 16px;
+                left: -16px;
+                top: -10px;
+            }
+        }
+    }
+
+    &__product-description {
+        max-width: 33%;
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            max-width: 45%;
+
+            font-size: 12px;
+        }
+    }
+
+    &__product-weight {
+        padding-block: 8px;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 50%;
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        z-index: 0;
+
+        @media (max-width: 480px) {
+            padding-block: 4px;
+
+            bottom: 55%;
+
+            font-size: 12px;
+        }
+
+        &--small {
+            padding-inline: 16px;
+            background-color: #3fbbcb;
+            left: 42.5%;
+
+            @media (max-width: 480px) {
+                padding-inline: 8px;
+
+                left: 22.5%;
+            }
+        }
+
+        &--big {
+            padding-inline: 24px;
+            background-color: #f39c00;
+            left: 30%;
+
+            @media (max-width: 480px) {
+                padding-inline: 12px;
+
+                left: 15%;
+
+                background-color: #fdca00;
+            }
+        }
+    }
+
+    &__product-image {
+        height: 135%;
+
+        position: absolute;
+
+        z-index: 1;
+        object-fit: contain;
+
+        &--small {
+            right: 8px;
+            bottom: -32px;
+
+            @media (max-width: 480px) {
+                height: 100%;
+                right: 0;
+                bottom: -12.5%;
+            }
+        }
+
+        &--big {
+            right: -16px;
+            bottom: -24px;
+
+            @media (max-width: 480px) {
+                height: 110%;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.vanilla-plombir-90-bg {
+    background-image: url("/images/product/vanilla-plombir/90/bg.png");
+
+    @media (max-width: 480px) {
+        background-image: url("/images/product/vanilla-plombir/90/bg-mobile.png");
+    }
+}
+
+.vanilla-plombir-120-bg {
+    background-image: url("/images/product/vanilla-plombir/120/bg.png");
+
+    @media (max-width: 480px) {
+        background-image: url("/images/product/vanilla-plombir/120/bg-mobile.png");
+    }
+}
+
+.fruitmix-90-bg {
+    background-image: url("/images/product/fruitmix/90/bg.png");
+
+    @media (max-width: 480px) {
+        background-image: url("/images/product/fruitmix/90/bg-mobile.png");
+    }
+}
+
+.fruitmix-120-bg {
+    background-image: url("/images/product/fruitmix/120/bg.png");
+
+    @media (max-width: 480px) {
+        background-image: url("/images/product/fruitmix/120/bg-mobile.png");
+    }
+}
