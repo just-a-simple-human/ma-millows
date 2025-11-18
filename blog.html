@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Каталог</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__menu-button">
+        <img src="images/menu-burger.png" alt="" class="header__menu-image" />
+      </button>
+      <a class="header__logo">
+        <img class="header__logo-img" src="images/logo.png" />
+      </a>
+      <div class="header__search-container">
+        <input
+          class="header__search-input"
+          placeholder="Поиск..."
+          name="search"
+        />
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="/">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="classic.html">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="about-us.html">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="blog.html">Идеи</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contact" class="menu__link" href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__button-container">
+        <button class="header__button">
+          <img class="header__button-img" src="images/cart.png" alt="" />
+        </button>
+        <button class="header__button">
+          <img class="header__button-img" src="images/account.png" alt="" />
+        </button>
+      </div>
+    </header>
+    <main class="page">
+      <section class="container blog-top">
+        <div class="blog-top__container">
+          <h1 class="blog-top__title">Блог</h1>
+          <p class="blog-top__text">
+            В нашем блоге вы можете ознакомиться с необычными рецептами
+            приготовления различных блюд<br />
+            с маршмеллоу maMiLlow’s, а так же читатели могут поделиться своими
+            уникальными рецептами.
+          </p>
+        </div>
+        <img
+          srcset="images/blog-top-img-mobile.png 480w, images/blog-top-img.png"
+          src="images/blog-top-img.png"
+          alt=""
+          class="blog-top__img"
+        />
+        <div class="blog-top__footer">
+          <a class="blog-top__button">Подписаться</a>
+        </div>
+      </section>
+      <nav class="container blog-nav">
+        <ul class="blog-nav__list">
+          <li class="blog-nav__item">
+            <a href="" class="blog-nav__link">Необычные рецепты</a>
+          </li>
+          <li class="blog-nav__item">
+            <a href="" class="blog-nav__link">Рецепты от наших читателей</a>
+          </li>
+          <li class="blog-nav__item">
+            <div class="blog-nav__input">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Поиск по блогу"
+                class="blog-nav__field"
+              />
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <section class="container blog-popular">
+        <h2 class="blog-popular__title">Популярное</h2>
+        <div class="swiper blog-popular__slider">
+          <div class="swiper-wrapper">
+            <artice class="swiper-slide blog-popular__card">
+              <img
+                src="images/home-blog-img-1.png"
+                alt=""
+                class="blog-popular__img"
+              />
+              <a href="" class="blog-popular__category">Необычные рецепты</a>
+              <p class="blog-popular__time">займёт 3 минуты чтения</p>
+              <h3 class="blog-popular__subtitle">
+                Пицца с маршмеллоу и ягодами
+              </h3>
+              <p class="blog-popular__description">
+                Ингредиенты: Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Dignissimos, quaerat porro incidunt magni molestiae
+                perferendis quia nam, at adipisci, blanditiis esse possimus
+                culpa?
+              </p>
+              <a href="" class="blog-popular__more-info">Читать далее...</a>
+            </artice>
+            <artice class="swiper-slide blog-popular__card">
+              <img
+                src="images/home-blog-img-2.png"
+                alt=""
+                class="blog-popular__img"
+              />
+              <a href="" class="blog-popular__category">Необычные рецепты</a>
+              <p class="blog-popular__time">займёт 3 минуты чтения</p>
+              <h3 class="blog-popular__subtitle">
+                Капкейк с запечёным маршмеллоу
+              </h3>
+              <p class="blog-popular__description">
+                Ингредиенты: Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Similique, nisi dolorem quibusdam tempora sed temporibus
+                quidem nihil minima id sunt?
+              </p>
+              <a href="" class="blog-popular__more-info">Читать далее...</a>
+            </artice>
+            <artice class="swiper-slide blog-popular__card">
+              <img
+                src="images/home-blog-img-3.png"
+                alt=""
+                class="blog-popular__img"
+              />
+              <a href="" class="blog-popular__category">Необычные рецепты</a>
+              <p class="blog-popular__time">займёт 3 минуты чтения</p>
+              <h3 class="blog-popular__subtitle">
+                Маршмеллоу-тосты с солёной карамелью
+              </h3>
+              <p class="blog-popular__description">
+                Ингредиенты: Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. At esse nesciunt deleniti itaque distinctio deserunt?
+              </p>
+              <a href="" class="blog-popular__more-info">Читать далее...</a>
+            </artice>
+            <artice class="swiper-slide blog-popular__card">
+              <img
+                src="images/home-blog-img-1.png"
+                alt=""
+                class="blog-popular__img"
+              />
+              <a href="" class="blog-popular__category">Необычные рецепты</a>
+              <p class="blog-popular__time">займёт 3 минуты чтения</p>
+              <h3 class="blog-popular__subtitle">
+                Пицца с маршмеллоу и ягодами
+              </h3>
+              <p class="blog-popular__description">
+                Ингредиенты: Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Dignissimos, quaerat porro incidunt magni molestiae
+                perferendis quia nam, at adipisci, blanditiis esse possimus
+                culpa?
+              </p>
+              <a href="" class="blog-popular__more-info">Читать далее...</a>
+            </artice>
+            <artice class="swiper-slide blog-popular__card">
+              <img
+                src="images/home-blog-img-2.png"
+                alt=""
+                class="blog-popular__img"
+              />
+              <a href="" class="blog-popular__category">Необычные рецепты</a>
+              <p class="blog-popular__time">займёт 3 минуты чтения</p>
+              <h3 class="blog-popular__subtitle">
+                Капкейк с запечёным маршмеллоу
+              </h3>
+              <p class="blog-popular__description">
+                Ингредиенты: Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Similique, nisi dolorem quibusdam tempora sed temporibus
+                quidem nihil minima id sunt?
+              </p>
+              <a href="" class="blog-popular__more-info">Читать далее...</a>
+            </artice>
+            <artice class="swiper-slide blog-popular__card">
+              <img
+                src="images/home-blog-img-3.png"
+                alt=""
+                class="blog-popular__img"
+              />
+              <a href="" class="blog-popular__category">Необычные рецепты</a>
+              <p class="blog-popular__time">займёт 3 минуты чтения</p>
+              <h3 class="blog-popular__subtitle">
+                Маршмеллоу-тосты с солёной карамелью
+              </h3>
+              <p class="blog-popular__description">
+                Ингредиенты: Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. At esse nesciunt deleniti itaque distinctio deserunt?
+              </p>
+              <a href="" class="blog-popular__more-info">Читать далее...</a>
+            </artice>
+          </div>
+          <div class="blog-popular__navigation">
+            <button
+              class="swiper-button-prev blog-popular__slider-button"
+            ></button>
+            <button
+              class="swiper-button-next blog-popular__slider-button"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <div class="container blog-bottom">
+        <section class="blog-recipe">
+          <div class="blog-recipe__info">
+            <div class="blog-recipe__container">
+              <img
+                src="images/blog-recipe-img.png"
+                alt=""
+                class="blog-recipe__img"
+              />
+              <p class="blog-recipe__description">
+                Удивительный по своей простоте десерт, который вы сможете
+                приготовить дома с детьми. Получается оригинальный, нежный,
+                вкусный и экономный десерт!
+              </p>
+            </div>
+            <div class="blog-recipe__container">
+              <h2 class="blog-recipe__title">Пицца с маршмеллоу</h2>
+              <table class="blog-ingredients">
+                <caption class="blog-ingredients__caption">
+                  Ингрeдиенты:
+                </caption>
+                <tbody class="blog-ingredients__table">
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">Мука</th>
+                    <td class="blog-ingredients__cell">150г</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">Дрожжи</th>
+                    <td class="blog-ingredients__cell">1 ч. ложка</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">
+                      Тёплая вода
+                    </th>
+                    <td class="blog-ingredients__cell">100 мл</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">
+                      Сливочное масло
+                    </th>
+                    <td class="blog-ingredients__cell">2 ст. ложки</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">Сахар</th>
+                    <td class="blog-ingredients__cell">3 ст. ложки</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">Соль</th>
+                    <td class="blog-ingredients__cell">1 щепотка</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">Нутелла</th>
+                    <td class="blog-ingredients__cell">5 ст. ложек</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">
+                      Маршмеллоу
+                    </th>
+                    <td class="blog-ingredients__cell">1 стакан</td>
+                  </tr>
+                  <tr class="blog-ingredients__row">
+                    <th scope="row" class="blog-ingredients__cell">Шоколад</th>
+                    <td class="blog-ingredients__cell">50-80 грамм</td>
+                  </tr>
+                </tbody>
+                <tfoot class="blog-ingredients__footer">
+                  <tr class="blog-ingredients__footer-row">
+                    <th
+                      scope="row"
+                      class="blog-ingredients__cell blog-ingredients__cell--footer"
+                    >
+                      Количество порций:
+                    </th>
+                    <td class="blog-ingredients__cell">
+                      <div class="blog-ingredients__counter">
+                        <button class="blog-ingredients__counter-button">
+                          -
+                        </button>
+                        <input
+                          type="number"
+                          value="1"
+                          min="1"
+                          class="blog-ingredients__counter-input"
+                        />
+                        <button class="blog-ingredients__counter-button">
+                          +
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section class="blog-steps">
+          <h2 class="blog-steps__title">Пошаговый рецепт:</h2>
+          <div class="blog-steps__scroll">
+            <ul class="blog-steps__list">
+              <li class="blog-steps__item">
+                <img
+                  src="images/blog-steps-1.png"
+                  alt=""
+                  class="blog-steps__img"
+                />
+                <div class="blog-steps__container">
+                  <p class="blog-steps__text">
+                    Удивительный по своей простоте десерт, который вы сможете
+                    приготовить дома с детьми. Получается оригинальный, нежный,
+                    вкусный и экономный десерт!
+                  </p>
+                </div>
+              </li>
+              <li class="blog-steps__item">
+                <img
+                  src="images/blog-steps-2.png"
+                  alt=""
+                  class="blog-steps__img"
+                />
+                <div class="blog-steps__container">
+                  <p class="blog-steps__text">
+                    Удивительный по своей простоте десерт, который вы сможете
+                    приготовить дома с детьми. Получается оригинальный, нежный,
+                    вкусный и экономный десерт!
+                  </p>
+                </div>
+              </li>
+              <li class="blog-steps__item">
+                <img
+                  src="images/blog-steps-3.png"
+                  alt=""
+                  class="blog-steps__img"
+                />
+                <div class="blog-steps__container">
+                  <p class="blog-steps__text">
+                    Удивительный по своей простоте десерт, который вы сможете
+                    приготовить дома с детьми. Получается оригинальный, нежный,
+                    вкусный и экономный десерт!
+                  </p>
+                </div>
+              </li>
+              <li class="blog-steps__item">
+                <img
+                  src="images/blog-steps-4.png"
+                  alt=""
+                  class="blog-steps__img"
+                />
+                <div class="blog-steps__container">
+                  <p class="blog-steps__text">
+                    Удивительный по своей простоте десерт, который вы сможете
+                    приготовить дома с детьми. Получается оригинальный, нежный,
+                    вкусный и экономный десерт!
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="blog-steps__review">
+              <h3 class="blog-steps__subtitle">Оценить рецепт</h3>
+              <div>
+                <button>
+                  <img
+                    class="blog-steps__crowns"
+                    src="images/blog-review-img.png"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <p class="blog-steps__views">
+                Приготовлено
+                <span class="blog-steps__views blog-steps__views--accent">
+                  45
+                </span>
+                раз
+              </p>
+            </div>
+            <div class="blog-steps__video">
+              <h3 class="blog-steps__subtitle">Видео пошагового рецепта</h3>
+              <iframe
+                class="blog-steps__player"
+                allowfullscreen
+                src="https://www.youtube.com/embed/2PuFyjAs7JA?si=OuUf3vIZr2ZV96va?autoplay=1"
+                frameborder="0"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="container feedback" id="#feedback">
+      <section id="contact" class="contact" aria-labelledby="#contact-heading">
+        <h2 id="contact-heading" class="contact__heading">Контакты</h2>
+        <img
+          srcset="images/contact-bg-mobile.png 480w, images/contact-bg.png"
+          alt=""
+          class="contact__image"
+        />
+        <ul class="contact__list">
+          <li class="contact__item">
+            <img src="images/contact-email.png" alt="" class="contact__icon" />
+            <div class="contact__info">
+              <p class="contact__title">Email</p>
+              <a href="mailto:info@mamillows.ru" class="contact__link"
+                >info@mimillows.ru</a
+              >
+            </div>
+          </li>
+          <li class="contact__item">
+            <img src="images/contact-tg.png" alt="" class="contact__icon" />
+            <div class="contact__info">
+              <p class="contact__title">Поддержка</p>
+              <a href="t.me/mamillows" target="_blank" class="contact__link"
+                >t.me/mamillows</a
+              >
+            </div>
+          </li>
+          <li class="contact__item">
+            <img src="images/contact-vk.png" alt="" class="contact__icon" />
+            <div class="contact__info">
+              <p class="contact__title">ВКонтакте</p>
+              <a href="vk.com/mamillows" target="_blank" class="contact__link"
+                >vk.com/mamillows</a
+              >
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="feedback__container">
+        <h2 class="feedback__heading">Отправить вопрос</h2>
+        <p class="feedback__text">
+          Если вы хотите обсудить что-либо, связанное с оплатой, учётной
+          записью, лицензированием, партнёрством или задать вопросы перед
+          продажей, вы попали по адресу
+        </p>
+        <form action="" class="feedback__form">
+          <div class="feedback__value feedback__name">
+            <label for="feedback-name" class="feedback__label"
+              >Полное имя</label
+            >
+            <input
+              placeholder="Введите имя..."
+              name="feedback-name"
+              type="text"
+              class="feedback__input"
+            />
+          </div>
+          <div class="feedback__value feedback__email">
+            <label for="feedback-email" class="feedback__label">Email</label>
+            <input
+              placeholder="Введите email..."
+              name="feedback-email"
+              type="text"
+              class="feedback__input"
+            />
+          </div>
+          <div class="feedback__value feedback__phone">
+            <label for="feedback-phone" class="feedback__label"
+              >Номер телефона</label
+            >
+            <input
+              placeholder="Введите номер телефона..."
+              name="feedback-phone"
+              type="text"
+              class="feedback__input"
+            />
+          </div>
+          <div class="feedback__value feedback__question">
+            <label for="feedback-question" class="feedback__label"
+              >Ваш вопрос</label
+            >
+            <textarea
+              rows="6"
+              placeholder="Написать сообщение"
+              name="feedback-question"
+              class="feedback__text-area"
+            ></textarea>
+          </div>
+          <button type="submit" class="feedback__button">Отправить</button>
+        </form>
+      </section>
+    </div>
+    <footer class="footer">
+      <label for="subscription-email" class="footer__label"
+        >Получите доступ к интересным статьям, акциям и специальным предложениям
+        для вас</label
+      >
+      <form action="" class="footer__form">
+        <fieldset class="footer__field">
+          <input type="text" id="subscription-email" class="footer__input" />
+          <button type="submit" class="footer__button">Отправить</button>
+        </fieldset>
+        <fieldset class="footer__field">
+          <input
+            type="checkbox"
+            checked="false"
+            id="subscription-checkbox"
+            class="footer__privacy-checkbox"
+          />
+          <label for="subscription-checkbox" class="footer__privacy-label"
+            >Я согласен с <a href="">политикой конфиденциальности</a></label
+          >
+        </fieldset>
+      </form>
+      <img
+        srcset="images/footer-separator-mobile.png 480w"
+        alt=""
+        class="footer__sepatator"
+      />
+      <p class="footer__info">
+        ООО &laquo;Компания&raquo;<br />
+        <br />
+        ИНН 12943253421<br />
+        <br />
+        Адрес юридический: 115114 г. Белгород Петров-Сергеева-Егорова-Андреева
+        дом 4, стр. 1, 9 этаж, офис 93<br />
+        <br />
+        Безопасность платежей гарантируется использованием SSL протокола. Данные
+        вашей банковской карты надёжно защищены при оплате онлайн<br />
+        <br />
+        &copy; 2024 ООО &laquo;Компания&raquo;. Все права защищены.
+      </p>
+      <nav class="footer__nav">
+        <a href="" class="footer__nav-link">Категория</a>
+        <a href="" class="footer__nav-link">Другая категория</a>
+        <a href="" class="footer__nav-link">Ещё категория</a>
+        <a href="" class="footer__nav-link">И ещё одна</a>
+        <a href="" class="footer__nav-link">Категория</a>
+        <a href="" class="footer__nav-link">Другая категория</a>
+        <a href="" class="footer__nav-link">Ещё категория</a>
+        <a href="" class="footer__nav-link">И ещё одна</a>
+        <a href="" class="footer__nav-link">Идеи</a>
+        <a href="" class="footer__nav-link">Контакты</a>
+        <a href="" class="footer__nav-link">Блог</a>
+        <a href="" class="footer__nav-link">Каталог</a>
+        <a href="" class="footer__nav-link">Политика конфиденциальности</a>
+        <a href="" class="footer__nav-link">Политика возврата</a>
+      </nav>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
+</html>

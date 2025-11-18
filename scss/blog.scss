@@ -1,0 +1,835 @@
+.blog-top {
+    padding-inline: 48px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    margin-top: 48px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+    aspect-ratio: 3;
+    gap: 32px;
+    position: relative;
+    background: linear-gradient(135deg, #40bbcb, #e08add);
+
+    @media (max-width: 480px) {
+        padding-inline: 20px;
+        padding-top: 20px;
+        padding-bottom: 16px;
+        margin-top: 24px;
+
+        gap: 0;
+
+        aspect-ratio: 701/507;
+
+        background: url("/images/blog-top-bg-mobile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &::before {
+        content: "";
+        width: 75%;
+        aspect-ratio: 2519/1135;
+        position: absolute;
+        align-self: center;
+        right: 0;
+        z-index: 2;
+        background-image: url("/images/blog-top-img-before.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateX(8.75%);
+
+        @media (max-width: 480px) {
+            width: 90%;
+            aspect-ratio: 631/388;
+            transform: translateX(1.25%) translateY(-2.5%);
+            background-image: url("/images/blog-top-img-before-mobile.png");
+        }
+    }
+
+    &__container {
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media (max-width: 480px) {
+            padding-top: 12px;
+            gap: 12px;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 758/453;
+        margin-bottom: 24px;
+
+        object-fit: contain;
+
+        @media (max-width: 480px) {
+            margin-bottom: 0;
+            aspect-ratio: 1;
+        }
+    }
+
+    &__title {
+        font-family: "AlterAves";
+        font-size: 48px;
+        font-weight: 500;
+        color: #ffffff;
+        position: relative;
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
+
+        &::before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: -32px;
+            top: -24px;
+            background-image: url("/images/white-crown.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @media (max-width: 480px) {
+                width: 20px;
+                height: 20px;
+                left: -16px;
+                top: -12px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__footer {
+        width: 50%;
+        padding-left: 48px;
+        padding-bottom: 32px;
+        aspect-ratio: 1648/392;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        display: flex;
+        align-items: end;
+
+        background-image: url("/images/category-banner-footer.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (max-width: 480px) {
+            padding-left: 20px;
+            padding-bottom: 12px;
+
+            background-image: none;
+        }
+    }
+
+    &__button {
+        padding-inline: 20px;
+        padding-block: 12px;
+        border-radius: 20px;
+
+        background-color: #d143d1;
+        cursor: pointer;
+
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+
+        @media (max-width: 480px) {
+            padding-inline: 8px;
+            padding-block: 8px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+    }
+}
+
+.blog-nav {
+    margin-top: 32px;
+
+    @media (max-width: 480px) {
+        margin-top: 24px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        border-bottom: 1px solid #000000;
+    }
+
+    &__item {
+        height: fit-content;
+
+        &:last-child {
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 16px;
+
+        border-bottom: 3px solid #000000;
+
+        font-family: "Gerbera-Medium";
+        font-size: 24px;
+        color: #000000;
+
+        @media (max-width: 480px) {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            font-size: 14px;
+        }
+    }
+
+    &__input {
+        padding-inline: 16px;
+        padding-block: 8px;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 16px;
+        border: 1px solid #baaf9b;
+
+        &::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+
+            background-image: url("/images/blog-search-icon.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__field {
+        flex: 1;
+
+        font-family: "Gerbera-Medium";
+        font-size: 20px;
+
+        &::placeholder {
+            font-weight: 500;
+            color: #baaf9b;
+        }
+    }
+}
+
+.blog-popular {
+    margin-top: 48px;
+
+    @media (max-width: 480px) {
+        margin-top: 24px;
+    }
+
+    &__title {
+        font-family: "AlterAves";
+        font-size: 40px;
+        color: #486dce;
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
+    }
+
+    &__slider {
+        width: calc(100% + 64px);
+        padding-inline: 32px;
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        left: -32px;
+
+        @media (max-width: 480px) {
+            width: calc(100% + 32px);
+            padding-inline: 16px;
+            margin-top: 16px;
+            left: -16px;
+        }
+    }
+
+    &__navigation {
+        height: 24px;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 3;
+        transform: translateY(-300%);
+
+        @media (max-width: 480px) {
+            display: none;
+        }
+    }
+
+    &__slider-button {
+        width: 16px;
+        height: 24px;
+        margin: 0;
+        left: unset;
+        right: unset;
+        position: relative;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &::after {
+            content: "";
+        }
+
+        &:first-of-type {
+            margin: 0;
+            top: 0;
+            background-image: url("/images/arrow-left.png");
+        }
+
+        &:last-of-type {
+            top: unset;
+            bottom: 0;
+            background-image: url("/images/arrow-right.png");
+        }
+    }
+
+    &__card {
+        display: grid;
+        grid-template-areas:
+            "img img"
+            "category time"
+            "title title"
+            "description description"
+            "link link"
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 12px;
+        column-gap: 8px;
+
+        @media (max-width: 480px) {
+            row-gap: 8px;
+            column-gap: 4px;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        grid-area: img;
+
+        object-fit: contain;
+    }
+
+    &__subtitle {
+        grid-area: title;
+
+        font-size: 16px;
+        color: #2d2d2d;
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+        }
+    }
+
+    &__category {
+        width: fit-content;
+        padding-inline: 8px;
+        padding-block: 4px;
+        border-radius: 9999px;
+
+        grid-area: category;
+
+        border: 1px solid #2d2d2d;
+
+        font-size: 14px;
+        color: #2d2d2d;
+        text-align: center;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__time {
+        grid-area: time;
+
+        display: flex;
+        align-items: center;
+
+        font-size: 14px;
+        color: #2d2d2d;
+        text-align: end;
+        text-wrap: balance;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__description {
+        max-height: fit-content;
+        grid-area: description;
+        overflow: hidden;
+
+        font-size: 14px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        color: #2d2d2d;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__more-info {
+        grid-area: link;
+
+        font-size: 14px;
+        color: #6c6c6c;
+
+        @media (max-width: 480px) {
+            font-size: 8px;
+        }
+    }
+
+    &__button {
+        width: fit-content;
+        padding-inline: 32px;
+        padding-block: 8px;
+        border-radius: 20px;
+
+        border: 1px solid #2d2d2d;
+
+        font-size: 16px;
+        color: #2d2d2d;
+
+        @media (max-width: 480px) {
+            padding-inline: 16px;
+            padding-block: 4px;
+
+            font-size: 12px;
+        }
+    }
+}
+
+.blog-bottom {
+    @media (max-width: 480px) {
+        margin-top: 24px;
+        border-radius: 12px;
+        padding: 12px;
+        background-color: #fcf4f8;
+        border: 1px solid #e08add;
+    }
+}
+
+.blog-recipe {
+    width: 100%;
+    margin-top: 48px;
+
+    @media (max-width: 480px) {
+        margin-top: 0;
+    }
+
+    &__info {
+        display: flex;
+        gap: 32px;
+
+        @media (max-width: 480px) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__img {
+        max-width: 100%;
+
+        @media (max-width: 480px) {
+            max-width: 75%;
+        }
+    }
+
+    &__title {
+        padding-bottom: 16px;
+
+        border-bottom: 3px solid #f3d7e4;
+
+        text-align: end;
+        font-family: "AlterAves";
+        font-size: 40px;
+        color: #d84e90;
+
+        @media (max-width: 480px) {
+            padding-bottom: 12px;
+            font-size: 28px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 400;
+
+        @media (max-width: 480px) {
+            max-width: 75%;
+            font-size: 12px;
+        }
+    }
+}
+
+.blog-ingredients {
+    display: flex;
+    flex-direction: column;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    @media (max-width: 480px) {
+        padding-inline: 16px;
+    }
+
+    &__caption {
+        margin-bottom: 12px;
+        text-align: start;
+        font-family: "AlterAves";
+        font-size: 32px;
+        color: #40bbcb;
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #baaf9b;
+
+        &>* {
+            flex: 1;
+        }
+    }
+
+    &__cell {
+        padding-block: 12px;
+
+        font-weight: 500;
+
+        @media (max-width: 480px) {
+            padding-block: 8px;
+            font-size: 12px;
+        }
+
+        &:first-child {
+            text-align: start;
+        }
+
+        &:last-child {
+            text-align: end;
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+    &__footer {
+        margin-top: 16px;
+        padding-inline: 16px;
+        background-color: #8cd6e0;
+    }
+
+    &__footer-row {
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__counter {
+        width: fit-content;
+        height: 32px;
+        display: flex;
+        gap: 12px;
+
+        @media (max-width: 480px) {
+            height: 24px;
+            flex: 1;
+        }
+    }
+
+    &__counter-input {
+        width: 72px;
+        height: 32px;
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: end;
+        font-size: 16px;
+        color: #000000;
+        background-color: #ffffff;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        @media (max-width: 480px) {
+            width: 48px;
+            height: 24px;
+
+            flex: 1;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+
+    &__counter-button {
+        width: 32px;
+        height: 32px;
+        border-radius: 9999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+
+        @media (max-width: 480px) {
+            width: 24px;
+            height: 24px;
+            flex: 1;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+
+.blog-steps {
+    width: 100%;
+    margin-top: 32px;
+
+    @media (max-width: 480px) {
+        margin-top: 24px;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        aspect-ratio: 763/27;
+
+        display: block;
+
+        background-image: url("/images/blog-steps-top.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        margin-top: 24px;
+
+        font-family: "AlterAves";
+        font-size: 40px;
+        color: #d77ba4;
+
+        @media (max-width: 480px) {
+            font-size: 28px;
+        }
+    }
+
+    &__scroll {
+        margin-top: 32px;
+        max-height: 512px;
+        overflow-y: scroll;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 480px) {
+            max-height: 256px;
+            margin-top: 16px;
+        }
+
+        &::-webkit-scrollbar {
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e08add;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: #e08add75;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        counter-reset: recipe-list;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media (max-width: 480px) {
+            gap: 12px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        max-height: fit-content;
+        gap: 32px;
+
+        @media (max-width: 480px) {
+            gap: 12px;
+        }
+    }
+
+    &__img {
+        width: 384px;
+        height: 256px;
+        object-fit: contain;
+
+        @media (max-width: 480px) {
+            width: 192px;
+            height: 128px;
+        }
+    }
+
+    &__container {
+        &::before {
+            counter-increment: recipe-list;
+            content: counter(recipe-list) ".";
+            font-family: "AlterAves";
+            font-size: 32px;
+            color: #d77ba4;
+
+            @media (max-width: 480px) {
+                font-size: 16px;
+            }
+        }
+
+        height: 128px;
+        margin-right: 64px;
+
+        display: flex;
+        align-items: baseline;
+        gap: 32px;
+
+        border-bottom: 2px solid #d67ba4;
+
+        font-size: 18px;
+        font-weight: 500;
+
+        @media (max-width: 480px) {
+            margin-right: 16px;
+
+            flex-direction: column;
+            gap: 8px;
+
+            font-size: 10px;
+        }
+    }
+
+    &__review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: fit-content;
+
+        @media (max-width: 480px) {
+            margin-top: 12px;
+            gap: 8px;
+        }
+    }
+
+    &__subtitle {
+        font-family: "AlterAves";
+        font-size: 28px;
+        color: #baaf9b;
+
+        @media (max-width: 480px) {
+            font-size: 18px;
+        }
+    }
+
+    &__crowns {
+        width: 256px;
+        object-fit: contain;
+
+        @media (max-width: 480px) {
+            width: 128px;
+        }
+    }
+
+    &__views {
+        padding: 16px;
+        border-radius: 9999px;
+
+        background-color: #d84e90;
+        color: #ffffff;
+
+        &--accent {
+            background-color: transparent;
+            font-family: "AlterAves";
+            font-size: 24px;
+
+            @media (max-width: 480px) {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            padding: 8px;
+            font-size: 10px;
+        }
+    }
+
+    &__video {
+        width: 100%;
+        margin-top: 32px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__player {
+        width: 50vw;
+        aspect-ratio: 2;
+        align-self: center;
+
+        @media (max-width: 480px) {
+            width: 100%;
+            margin-right: 16px;
+        }
+    }
+}
